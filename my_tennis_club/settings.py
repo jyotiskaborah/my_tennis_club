@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-(*q%1bz$9trlz4h484$isq7x23zk1q2zx$^+9#9k-*48mj=uz$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -77,26 +77,29 @@ WSGI_APPLICATION = 'my_tennis_club.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-"""
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-"""
+'''
 
 # added AWS database instead of local sqlite database, commented out above.
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
-        'USER': 'jyotiskaborah',
-        'PASSWORD': 'Red#green1',
-        'HOST': 'tennis-django-project.cncggmwe2jwt.ap-south-1.rds.amazonaws.com',
+        'USER': 'usernaam',
+        'PASSWORD': 'Welcome#back1',
+        'HOST': 'databasenaam.cncggmwe2jwt.ap-south-1.rds.amazonaws.com',
         'PORT': '5432'
     }
 }
+
 
 
 # Password validation
